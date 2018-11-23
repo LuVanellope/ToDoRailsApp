@@ -1,24 +1,25 @@
-# README
+# To Do App
+This app looks for to list pending that you should do in a day.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###### Things you need know:
+  - You can't repeat a tasks if appears in the window or create an empty one or no priority task, unfortunately still the app does not show this error to the user.
+  - If you write wrong a task you don have to worry just delete it with Dismiss button and create another one.
+  - If you end a taks just Update your advance whit the Button Done! and you done lose the track, this one will appear in the list of completed tasks to remind you that the finished work.
 
-Things you may want to cover:
+## Getting Started
+You just need clone the repository in your local and start.If you can see the [Demo](https://nameless-dawn-23667.herokuapp.com/)- Deploying with [Heroku](https://www.heroku.com/)
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+You need install prepreviously:
+ - Ruby
+ - Ruby on Rails
 
-* Configuration
+## Production
 
-* Database creation
+Remember that you need have a Heroku account to deploy the app.
 
-* Database initialization
+## Built With
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Bootsrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) - The Gem used to Styles
+* [Ruby on Rails](https://guides.rubyonrails.org/) - The Framework Used
