@@ -1,0 +1,6 @@
+<% if @todo.errors.any? %>
+  alert('ERROR(S): <%= j @todo.errors.full_messages.join('; ') %>')
+  console.log('tiene errores');
+<% else %>
+  $('#new_task').hide().after('<%= j render ('new')%>');
+<% end %>

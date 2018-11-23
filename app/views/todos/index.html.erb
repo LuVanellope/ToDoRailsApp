@@ -1,0 +1,50 @@
+<div class='container-fluid'>
+  <h1 class='text-center bg bg-dark'>My Todos</h1>
+  <div class='row justify-content-center p-5'>
+    <%= link_to 'New task', new_todo_path, id:'new_task', class: 'btn btn-outline-info', remote: true  %>
+  </div>
+
+  <div class='row'>
+
+    <div class='col'>
+      <ul class='list-group'>
+        <li class='list-group-item list-group-item-warning'>Pending Tasks</li>
+      </ul>
+      <table class='table table-hover'>
+        <thead>
+          <tr>
+            <th>Tasks</th>
+            <th>Priority</th>
+            <th>Give Up</th>
+            <th>Done</th>
+          </tr>
+        </thead>
+        <tbody id='tasks'>
+          <% @todos.where(done: false).each do |todo| %>
+            <%= render 'todo', todo: todo %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+    <div class='col'>
+      <ul class='list-group'>
+        <li class="list-group-item list-group-item-success">Yei! Done Tasks</li>
+      </ul>
+      <table class='table table-hover'>
+        <thead>
+          <tr>
+            <th>Tasks</th>
+            <th>Priority</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody  id='done'>
+          <% @todos.where(done: true).each do |todo| %>
+            <%= render 'update', todo: todo %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

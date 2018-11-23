@@ -1,0 +1,2 @@
+$('#todo_<%= @todo.id %>').remove();
+$('#done').append('<%= j render partial:"update", locals: {todo: @todo} , layout:false %>');

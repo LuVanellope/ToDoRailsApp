@@ -1,0 +1,6 @@
+<tr id="todo_<%= todo.id %>">
+  <td><%= todo.description %></td>
+  <td><%= todo.priority %></td>
+  <td><%= link_to 'Dismiss', todo,  method: :delete, class: 'btn btn-danger', remote: true %></td>
+  <td><%= link_to 'Done', todo,  method: :put, id: todo.id, class: 'btn btn-success', remote: true %></td>
+</tr>

@@ -1,0 +1,12 @@
+<% if @todo.errors.count == 0 %>
+
+	$('#new_todo').remove();
+	$('#new_task').show();
+	$('#tasks').append('<%= j render('todo', todo: @todo) %>');
+
+<% else %>
+
+	$('.new_task').remove();
+	$('#new_task_link').after('<%= j render('new') %>');
+	
+<%end%>

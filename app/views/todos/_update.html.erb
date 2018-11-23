@@ -1,0 +1,5 @@
+<tr id="todo_<%= todo.id %>" class="text-muted">
+  <td><del><%= todo.description %><del></td>
+  <td><del><%= todo.priority %><del></td>
+  <td><%= link_to 'Erase', todo,  method: :delete, class: 'btn btn-secondary', remote: true %></td>
+</tr>
